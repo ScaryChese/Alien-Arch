@@ -8,7 +8,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D physicsBody = null;
 
 
+    public Collider2D groundSensor = null;
+    public LayerMask grounLayer = 0;
+
     public float speed = 1;
+
+    public float jumpSpeed = 10;
+
+
 
 
 
@@ -37,6 +44,17 @@ public class PlayerMovement : MonoBehaviour
         physicsBody.velocity = newVelocity;
     }
 
+    public void Jump()
+    {
+        if (groundSensor.IsTouchingLayers(grounLayer))
+        {
+            Vector2 newVelocity = physicsBody.velocity;
+
+            newVelocity.y = jumpSpeed;
+
+            physicsBody.velocity = newVelocity;
+        }
+    }
 
 
 
