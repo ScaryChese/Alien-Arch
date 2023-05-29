@@ -3337,7 +3337,7 @@ GameObject:
   - component: {fileID: 1766331334}
   - component: {fileID: 1766331333}
   - component: {fileID: 1766331338}
-  - component: {fileID: 1766331337}
+  - component: {fileID: 1766331339}
   m_Layer: 0
   m_Name: HazardEnemy
   m_TagString: Untagged
@@ -3451,20 +3451,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1766331337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766331332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b74c99daa088441b2f6067ac22cf99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceStrength: 4
-  direction: {x: -1, y: 0}
 --- !u!50 &1766331338
 Rigidbody2D:
   serializedVersion: 4
@@ -3486,6 +3472,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1766331339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766331332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6403047fc6508d84a9d5be8ae9b8f5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceStrength: 15
+  patrolPaths:
+  - {x: 7, y: 0.82}
+  - {x: 7, y: 1}
+  - {x: 11.67, y: 0.82}
+  stopDistance: 0
 --- !u!1 &1775519017
 GameObject:
   m_ObjectHideFlags: 0
